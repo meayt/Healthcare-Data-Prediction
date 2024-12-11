@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Class Prediction</title>
+</head>
+<body>
+    <div style="text-align: center; margin-top: 50px;">
+        <h2>Predict BMI Class</h2>
+        <form method="POST" action="/predict">
+            <label for="age">Age:</label><br>
+            <input type="text" id="age" name="age" required><br><br>
+            
+            <label for="height">Height (in meters):</label><br>
+            <input type="text" id="height" name="height" required><br><br>
+
+            <label for="weight">Weight (in kilograms):</label><br>
+            <input type="text" id="weight" name="weight" required><br><br>
+
+            <label for="bmi">BMI:</label><br>
+            <input type="text" id="bmi" name="bmi" required><br><br>
+            
+            <input type="submit" value="Predict">
+        </form>
+
+        <h3>{{ prediction_text }}</h3>
+    </div>
+</body>
+</html>
