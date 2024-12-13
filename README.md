@@ -1,4 +1,4 @@
-# BMI healthcare daata Prediction App
+# BMI healthcare data Prediction App
 
 ## Project Title
 BMI Prediction App: Leveraging Healthcare Data for Body Mass Index Predictions
