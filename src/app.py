@@ -13,7 +13,7 @@ label_encoder = joblib.load('./data/label_encoder.pkl')
 
 @app.route('/')
 def home():
-    return render_template('./src/templates/index.html')
+    return render_template('index.html')  # Correct path
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -33,15 +33,11 @@ def predict():
         bmi_class = label_encoder.inverse_transform(prediction)
         print("Decoded prediction:", bmi_class)
 
-        return render_template('./src/templates/index.html', prediction_text=f'The person is classified as: {bmi_class[0]}')
-
+        return render_template('index.html', prediction_text=f'The person is classified as: {bmi_class[0]}')
     except Exception as e:
         print("Error during prediction:", e)
-        return render_template('./src/templates/index.html', prediction_text="Error occurred, please check your inputs.")
+        return render_template('index.html', prediction_text="Error occurred, please check your inputs.")
 
 
 if __name__ == "__main__":
     app.run(debug=True)
-
-#app.run(port=5001)
-
