@@ -5,7 +5,7 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 
 # Load Dataset
 # Replace 'health_data.csv' with your dataset file path
-data = pd.read_csv('meet/bmi.csv')
+data = pd.read_csv('./data/bmi.csv')
 
 # Features and Target
 X = data[['age', 'height', 'weight', 'bmi']]  # Feature columns

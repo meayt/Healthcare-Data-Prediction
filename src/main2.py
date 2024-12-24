@@ -5,7 +5,7 @@ from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 import matplotlib.pyplot as plt
 
 # Load Dataset
-data = pd.read_csv('meet/bmi.csv')  # Replace with your dataset file path
+data = pd.read_csv('./data/bmi.csv')  # Replace with your dataset file path
 
 # Features and Target
 X = data[['Age', 'Height', 'Weight', 'Bmi']]  # Feature columns
